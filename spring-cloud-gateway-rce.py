@@ -82,7 +82,7 @@ if __name__=="__main__":
         result = exp(url,cmd,system)
         if result:
             print(Fore.YELLOW + '[+]命令执行成功，执行结果如下:' + Fore.GREEN + '\r\n%s' % result)
-        elif "bash" or "powershell" in cmd:
+        elif ("bash" in cmd) or ("powershell" in cmd):
             print(Fore.BLUE + "Vps上查看反弹shell")
         else:    
             print(Fore.RED + "[-]命令执行失败，漏洞利用失败!")
